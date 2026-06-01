@@ -1,37 +1,60 @@
 let model;
 
-// 1. Charger le modèle COCO-SSD
 async function loadModel() {
-model = await cocoSsd.load();
-console.log("Modèle chargé");
+  model = await cocoSsd.load();
+  console.log("Modèle chargé");
 }
 
 loadModel();
 
-// 2. Afficher l’image choisie par l’utilisateur
 const imageUpload = document.getElementById("imageUpload");
 const img = document.getElementById("img");
 
 imageUpload.addEventListener("change", function(event) {
-const file = event.target.files[0];
-img.src = URL.createObjectURL(file);
+  const file = event.target.files[0];
+  img.src = URL.createObjectURL(file);
 });
 
-// 3. Détecter les objets dans l’image
 async function detectObjects() {
-const predictions = await model.detect(img);
+  const predictions = await model.detect(img);
+  console.log("Predictions:", predictions);
 
-console.log("Predictions:", predictions);
+  const result = document.getElementById("result");
+  result.innerHTML = "";
 
-const result = document.getElementById("result");
-result.innerHTML = "";
+  const inv = {};
+  predictions.forEach(p => {
+    inv[p.class] = (inv[p.class] || 0) + 1;
+    console.log(inv)
+  });
 
-predictions.forEach(prediction => {
-result.innerHTML += `
-<p>
-Objet : ${prediction.class} <br>
-Score : ${(prediction.score * 100).toFixed(2)} %
-</p>
+  for (let obj in inv) {
+    const quantite = inv[obj];
+    console.log(obj)}
+
+console.log(inv)
+
+//predictions.forEach ((prediction,position) => {
+ //result.innerHTML += `
+ // <p>
+
+//Objet: ${prediction.class} ${inv[prediction.class]} 
+      
+//</p>
+ // }
+// );
+// }
+ 
+for (let obj in inv) {
+
+    result.innerHTML += `
+    <p>
+        Objet : ${obj} ${inv[obj]}
+    </p>
+
+
 `;
-});
+
+  }
 }
+
