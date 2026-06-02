@@ -73,7 +73,7 @@ Elle a été pensée comme une aide pour les personnes malvoyantes : l’utilisa
 > J’ai détecté 1 voiture, 4 personne, 1 chien, 1 plante en pot, 1 tasse dans l’image.
 
 ---
-![Capture application](./exemple de résultat .png)
+![Exemple résultat](./resultat.png)
 
 ---
 # Objectif utilisateur
