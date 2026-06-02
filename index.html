@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Projet : Inventaire Vocal pour Personnes Malvoyantes</title>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
 
-<!-- Chargement de TensorFlow.js -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-
-<!-- Chargement du modèle COCO-SSD -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
-
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Projet : Inventaire Vocal pour Personnes Malvoyantes</h1>
+    <h1>Inventaire vocal pour personnes malvoyantes</h1>
 
-<p>Choisissez une image </p>
+    <p>
+        Choisissez une image. L’application détecte les objets,
+        crée un inventaire et lit le résultat à voix haute.
+    </p>
 
-<input type="file" id="imageUpload" accept="image/*">
+    <input type="file" id="imageUpload" accept="image/*">
 
-<br><br>
+    <br><br>
 
-<img id="img" width="400">
+    <img id="image" width="450">
 
-<br><br>
+    <br><br>
 
-<button onclick="detectObjects()">Détecter les objets</button>
+    <button id="analyserBtn">Analyser l’image</button>
+    <button id="lireBtn">Lire le résultat</button>
 
-<h2>Résultats :</h2>
-<div id="result"></div>
+    <h2>Inventaire détecté</h2>
+    <div id="inventaire"></div>
 
-<script src="script.js"></script>
+    <h2>Description vocale</h2>
+    <p id="description"></p>
 
+    <script src="script.js"></script>
 </body>
 </html>

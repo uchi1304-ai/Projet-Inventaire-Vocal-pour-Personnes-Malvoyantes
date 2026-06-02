@@ -23,4 +23,12 @@
     "definition": "Une tasse est un récipient utilisé pour boire une boisson."
   },
 
+   
+   "potted plant": {
+    "fr": "plante en pot",
+    "categorie": "objet du quotidien",
+    "definition": "Une plante en pot est une plante cultivée dans un récipient."
+  }
+
+ 
   }
