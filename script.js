@@ -40,7 +40,7 @@ async function detecterObjets() {
     }
 
     const predictions = await model.detect(image);
-
+    
     console.log("Predictions:", predictions);
 
     const inventaire = genererInventaire(predictions);
