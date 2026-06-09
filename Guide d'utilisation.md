@@ -1,4 +1,4 @@
-# GUIDE D' UTILISATION 
+# Guide d'utilisation
 
 ## Présentation de l’application
 
@@ -70,7 +70,7 @@ Elle a été pensée comme une aide pour les personnes malvoyantes : l’utilisa
 
 ## Phrase vocale générée
 
-> J’ai détecté 1 voiture, 4 personne, 1 chien, 1 plante en pot, 1 tasse dans l’image.
+> J’ai détecté 1 voiture, 4 personnes, 1 chien, 1 plante en pot, 1 tasse dans l’image.
 
 ---
 ![Exemple résultat](./resultat.png)
