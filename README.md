@@ -75,7 +75,7 @@ Exemple :
 ## Structure du projet
 
 ```text
-inventaire-vocal-malvoyants/
+Projet-Inventaire-Vocal-pour-Personnes-Malvoyantes/
 │
 ├── index.html
 ├── script.js
@@ -99,8 +99,7 @@ inventaire-vocal-malvoyants/
 1. Télécharger ou cloner le projet :
 
 ```bash
-git clone https://github.com/votre-compte/inventaire-vocal-malvoyants.git
-```
+git clone https://github.com/uchi1304-ai/Projet-Inventaire-Vocal-pour-Personnes-Malvoyantes.git
 
 2. Ouvrir le fichier :
 
